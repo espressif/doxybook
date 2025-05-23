@@ -79,7 +79,7 @@ extend-ignore = [
 [tool.commitizen]
 name = "cz_conventional_commits"
 tag_format = "v$version"
-version = "0.2.3"
+version = "0.2.4"
 update_changelog_on_bump = true
 version_files = [
     "doxybook/__init__.py",
