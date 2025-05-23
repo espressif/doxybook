@@ -62,9 +62,9 @@ def run(
     env = Environment(loader=loader, autoescape=select_autoescape())
     with tempfile.NamedTemporaryFile(mode='w', delete=False) as fw:
         template = env.get_template('api.jinja')
-        files = doxygen.header_files.children
         common_args = {
-            'files': files,
+            'files': doxygen.header_files.children,
+            'groups': doxygen.groups.children,
             'file_template': env.get_template(f'{template_lang}/file.jinja'),
             'table_template': env.get_template('table.jinja'),
             'detail_template': env.get_template('detail.jinja'),
