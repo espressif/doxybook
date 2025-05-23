@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.2.3 (2025-05-23)
+
+### Fix
+
+- add groups while template rendering
+
 ## v0.2.2 (2024-10-25)
 
 ### Fix
