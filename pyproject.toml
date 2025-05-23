@@ -53,14 +53,22 @@ line-length = 120
 skip-string-normalization = true
 
 [tool.ruff]
+line-length = 120
+target-version = "py37"
+
+[tool.ruff.format]
+quote-style = "single"
+docstring-code-format = true
+
+[tool.ruff.lint]
 select = [
     'F',  # Pyflakes
     'E',  # pycodestyle
     'W',  # pycodestyle
+    'I',  # isort
+    'UP',  # pyupgrade
     'PL',  # pylint
 ]
-line-length = 120
-target-version = "py37"
 extend-ignore = [
     "PLR0911",  # too-many-return-statements
     "PLR0912",  # too-many-branches
