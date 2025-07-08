@@ -62,6 +62,11 @@ def parse_options():
     parser.add_argument(
         '--doxygen-extra-args', default='', help='extra argument passed into doxygen. should be doublequoted'
     )
+    parser.add_argument(
+        '--doxygen-config',
+        default='Doxyfile',
+        help='Path to the Doxygen config file',
+    )
 
     action = parser.add_subparsers(dest='action')
     generate_templates = action.add_parser('generate-templates')
@@ -92,7 +97,7 @@ def _main() -> bool:
     if not doxygen_bin:
         raise RuntimeError(f'{args.doxygen_bin} not found in your PATH')
 
-    doxygen_cmd = [doxygen_bin]
+    doxygen_cmd = [doxygen_bin, args.doxygen_config]
     doxygen_cmd.extend(shlex.split(args.doxygen_extra_args))
 
     proc = subprocess.run(doxygen_cmd, capture_output=True)  # noqa: PLW1510
