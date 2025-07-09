@@ -80,9 +80,9 @@ def run(
 
         if not os.path.isfile(output_filepath):
             print(f'Generated single-markdown API reference: {output_filepath}')
-            shutil.move(fw.name, output_filepath)
+            shutil.copy(fw.name, output_filepath)
             return True
 
         print(f'Updated single-markdown API reference: {output_filepath}')
-        shutil.move(fw.name, output_filepath)
+        shutil.copy(fw.name, output_filepath)
         return True
