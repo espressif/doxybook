@@ -72,17 +72,15 @@ def run(
             'asctime': time.asctime(),
         }
         fw.write(template.render(**common_args))
-        fw.flush()
 
-        if os.path.isfile(output_filepath) and open(output_filepath).read() == open(fw.name).read():
-            print(f'No changes detected in {output_filepath}')
-            return False
+    if os.path.isfile(output_filepath) and open(output_filepath).read() == open(fw.name).read():
+        print(f'No changes detected in {output_filepath}')
+        return False
 
-        if not os.path.isfile(output_filepath):
-            print(f'Generated single-markdown API reference: {output_filepath}')
-            shutil.move(fw.name, output_filepath)
-            return True
+    if not os.path.isfile(output_filepath):
+        print(f'Generated single-markdown API reference: {output_filepath}')
+    else:
+        print(f'Updating single-markdown API reference: {output_filepath}')
 
-        print(f'Updated single-markdown API reference: {output_filepath}')
-        shutil.move(fw.name, output_filepath)
-        return True
+    shutil.move(fw.name, output_filepath)
+    return True
