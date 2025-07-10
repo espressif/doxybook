@@ -20,6 +20,13 @@
 </div>
 <hr>
 
+## v0.2.5 (2025-07-10)
+
+### 🐛 Bug Fixes
+
+- **windows**: close temp filestream first before moving the file *(Fu Hanxi - 64a703e)*
+
+
 ## v0.2.4 (2025-05-23)
 
 
