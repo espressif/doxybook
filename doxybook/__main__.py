@@ -52,7 +52,7 @@ def parse_options():
         '--template-lang',
         choices=SUPPORTED_LANGS,
         default='c',
-        help='specifies your project\'s main language.',
+        help="specifies your project's main language.",
     )
     parser.add_argument(
         '--doxygen-bin',
@@ -97,7 +97,7 @@ def _main() -> bool:
 
     proc = subprocess.run(doxygen_cmd, capture_output=True)  # noqa: PLW1510
     if proc.returncode != 0:
-        error(f'Failed to run command \"{" ".join(doxygen_cmd)}\":')
+        error(f'Failed to run command "{" ".join(doxygen_cmd)}":')
         error(proc.stderr.decode('utf-8'))
         sys.exit(1)
 
