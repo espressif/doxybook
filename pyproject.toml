@@ -79,11 +79,18 @@ extend-ignore = [
 ]
 
 [tool.commitizen]
-name = "cz_conventional_commits"
+name = "czespressif"
+
+annotated_tag = true
 tag_format = "v$version"
+
 version = "0.2.4"
-update_changelog_on_bump = true
 version_files = [
     "doxybook/__init__.py",
     "README.md",
 ]
+
+update_changelog_on_bump = true
+changelog_merge_prerelease = true
+
+types_in_changelog = ["BREAKING CHANGE", "feat", "fix", "refactor", "change", "perf", "docs"]
