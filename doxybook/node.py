@@ -40,7 +40,7 @@ class Node:
         refid: str = None,
         options: t.Optional[dict] = None,
     ):
-        self._children: ['Node'] = []
+        self._children: [Node] = []
         self._cache: Cache = cache
         self._parser: XmlParser = parser
         self._parent = parent
