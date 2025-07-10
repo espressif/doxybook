@@ -7,20 +7,34 @@ on:
 
 jobs:
   test-build-docs:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - name: install dependencies
+      - name: install doxygen (Ubuntu)
+        if: matrix.os == 'ubuntu-latest'
         run: |
           sudo apt-get update
           sudo apt-get install -y -q --no-install-recommends doxygen
+          doxygen --version
+      - name: install doxygen (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          choco install doxygen.install
+          $doxygenPath = "C:\Program Files\doxygen\bin"
+          echo "$doxygenPath" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      - name: install python dependencies
+        run: |
           pip install flit
           pip install -e ".[doc]"
       - name: generate templates
         run: |
+          doxygen --version
           esp-doxybook generate-templates
       - name: generate c api
         run: |
@@ -33,11 +47,11 @@ jobs:
           esp-doxybook -i temp/xml -o ../../docs/cpp_api.md --template-dir ../../templates --template-lang cpp
           popd
       - name: deploy mkdocs
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' && matrix.os == 'ubuntu-latest'
         run: |
           mkdocs gh-deploy --force
       - uses: actions/upload-artifact@v4
         with:
-          name: api-reference
+          name: api-reference-${{ matrix.os }}
           path: docs
           if-no-files-found: error
