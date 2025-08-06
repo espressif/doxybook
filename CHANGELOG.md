@@ -20,6 +20,13 @@
 </div>
 <hr>
 
+## v0.3.0 (2025-08-06)
+
+### ✨ New Features
+
+- Add Group Support *(HalfSweet - 02ff254)*
+
+
 ## v0.2.5 (2025-07-10)
 
 ### 🐛 Bug Fixes

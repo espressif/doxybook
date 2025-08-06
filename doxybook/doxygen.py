@@ -1,4 +1,5 @@
 import os
+import typing as t
 from xml.etree import (
     ElementTree,
 )
@@ -17,7 +18,6 @@ from doxybook.xml_parser import (
     XmlParser,
 )
 
-import typing as t
 
 class Doxygen:
     def __init__(self, index_path: str, parser: XmlParser, cache: Cache, options: dict = {}):
@@ -84,23 +84,23 @@ class Doxygen:
         effectively flattening the group hierarchy and treating group members as regular items.
         """
         extracted_refids = set()  # Track already extracted members to avoid duplicates
-        
+
         def find_file_for_member(member: Node) -> t.Optional[Node]:
             """Find the appropriate file node for a member based on its location"""
             member_location = member.location
             if not member_location:
                 return None
-                
+
             # Search through all files to find the one that matches the member's location
             for file_node in self.files.children:
                 if file_node.is_file and file_node.location == member_location:
                     return file_node
             return None
-        
+
         def extract_from_group(group_node: Node):
             """Recursively extract members from a group and its subgroups"""
             members_to_extract = []
-            
+
             for child in group_node.children:
                 if child.kind == Kind.GROUP:
                     # Recursively process subgroups
@@ -109,7 +109,7 @@ class Doxygen:
                     # This is a function, macro, variable, etc. - add it to extraction list
                     members_to_extract.append(child)
                     extracted_refids.add(child.refid)
-            
+
             # Add extracted members to their respective files
             for member in members_to_extract:
                 target_file = find_file_for_member(member)
@@ -122,7 +122,7 @@ class Doxygen:
                     # If no file found, add to root as fallback
                     member._parent = self.root
                     self.root.add_child(member)
-        
+
         # Process all groups
         for group in self.groups.children:
             extract_from_group(group)
