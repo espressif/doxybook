@@ -1,0 +1,1073 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="../cpp_api/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>API Reference - Test Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Test Project" class="md-header__button md-logo" aria-label="Test Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Test Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Test Project" class="md-nav__button md-logo" aria-label="Test Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Test Project
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#header-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-test_compincludecomp1h" class="md-nav__link">
+    <span class="md-ellipsis">
+      File test_comp/include/comp1.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-and-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures and Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-and-types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures and Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structures and Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct-comp1" class="md-nav__link">
+    <span class="md-ellipsis">
+      struct comp1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-comp1_int" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef comp1_int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-union_comp1" class="md-nav__link">
+    <span class="md-ellipsis">
+      union union_comp1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      function add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      function print
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macros Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-test_foo" class="md-nav__link">
+    <span class="md-ellipsis">
+      define TEST_FOO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-test_compincludecomp2h" class="md-nav__link">
+    <span class="md-ellipsis">
+      File test_comp/include/comp2.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-and-types_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures and Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-and-types-documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures and Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structures and Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum DAY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-comp2" class="md-nav__link">
+    <span class="md-ellipsis">
+      struct comp2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-comp2_int" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef comp2_int
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-add_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      function add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-print_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      function print
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#header-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-test_compincludecomp1h" class="md-nav__link">
+    <span class="md-ellipsis">
+      File test_comp/include/comp1.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-and-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures and Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-and-types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures and Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structures and Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct-comp1" class="md-nav__link">
+    <span class="md-ellipsis">
+      struct comp1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-comp1_int" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef comp1_int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-union_comp1" class="md-nav__link">
+    <span class="md-ellipsis">
+      union union_comp1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      function add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      function print
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macros Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-test_foo" class="md-nav__link">
+    <span class="md-ellipsis">
+      define TEST_FOO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-test_compincludecomp2h" class="md-nav__link">
+    <span class="md-ellipsis">
+      File test_comp/include/comp2.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-and-types_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures and Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-and-types-documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures and Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structures and Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum DAY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-comp2" class="md-nav__link">
+    <span class="md-ellipsis">
+      struct comp2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-comp2_int" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef comp2_int
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-add_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      function add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-print_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      function print
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-reference">API Reference</h1>
+<h2 id="header-files">Header files</h2>
+<ul>
+<li><a href="#file-test_compincludecomp1h">test_comp/include/comp1.h</a></li>
+<li><a href="#file-test_compincludecomp2h">test_comp/include/comp2.h</a></li>
+</ul>
+<h2 id="file-test_compincludecomp1h">File test_comp/include/comp1.h</h2>
+<p><em>This is a test file for</em> <a href="#struct-comp1"><em><strong>comp1</strong></em></a><em>.</em></p>
+<p>To use this driver:</p>
+<ul>
+<li>include this file in your project</li>
+<li><a href="#function-print"><strong>print()</strong></a> is a function that prints "Hello World!"</li>
+</ul>
+<h2 id="structures-and-types">Structures and Types</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="#struct-comp1"><strong>comp1</strong></a> <br><em>struct comp</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef int</td>
+<td style="text-align: left;"><a href="#typedef-comp1_int"><strong>comp1_int</strong></a>  <br><em>typedef int for comp</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">union</td>
+<td style="text-align: left;"><a href="#union-union_comp1"><strong>union_comp1</strong></a>  <br><em>it's a union!!!</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-add"><strong>add</strong></a> (<a href="#struct-comp1"><strong>comp1</strong></a> a, <a href="#struct-comp1"><strong>comp1</strong></a> b) <br><em>print the added result</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-print"><strong>print</strong></a> (void) <br><em>print function</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="macros">Macros</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="#define-test_foo"><strong>TEST_FOO</strong></a>  111;<br><em>THIS IS TEST_FOO VARIABLE!</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="structures-and-types-documentation">Structures and Types Documentation</h2>
+<h3 id="struct-comp1">struct <code>comp1</code></h3>
+<p><em>struct comp</em></p>
+<p>Variables:</p>
+<ul>
+<li>
+<p>int bar  </p>
+</li>
+<li>
+<p>int foo  <br><em>??? foo?</em></p>
+</li>
+</ul>
+<h3 id="typedef-comp1_int">typedef <code>comp1_int</code></h3>
+<p><em>typedef int for comp</em></p>
+<pre><code class="language-c">typedef int comp1_int;
+</code></pre>
+<h3 id="union-union_comp1">union <code>union_comp1</code></h3>
+<p><em>it's a union!!!</em></p>
+<p>Variables:</p>
+<ul>
+<li>
+<p><a href="#struct-comp1"><strong>comp1</strong></a> a  </p>
+</li>
+<li>
+<p><a href="#struct-comp1"><strong>comp1</strong></a> b  </p>
+</li>
+</ul>
+<h2 id="functions-documentation">Functions Documentation</h2>
+<h3 id="function-add">function <code>add</code></h3>
+<p><em>print the added result</em></p>
+<pre><code class="language-c">void add (
+    comp1 a,
+    comp1 b
+) 
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> aaa </li>
+<li><code>b</code> bbb</li>
+</ul>
+<h3 id="function-print">function <code>print</code></h3>
+<p><em>print function</em></p>
+<pre><code class="language-c">void print (
+    void
+) 
+</code></pre>
+<h2 id="macros-documentation">Macros Documentation</h2>
+<h3 id="define-test_foo">define <code>TEST_FOO</code></h3>
+<p><em>THIS IS TEST_FOO VARIABLE!</em></p>
+<pre><code class="language-c">#define TEST_FOO 111;
+</code></pre>
+<h2 id="file-test_compincludecomp2h">File test_comp/include/comp2.h</h2>
+<h2 id="structures-and-types_1">Structures and Types</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">enum</td>
+<td style="text-align: left;"><a href="#enum-day"><strong>DAY</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="#struct-comp2"><strong>comp2</strong></a> <br><em>struct</em> <a href="#struct-comp2"><em><strong>comp2</strong></em></a></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef int</td>
+<td style="text-align: left;"><a href="#typedef-comp2_int"><strong>comp2_int</strong></a>  <br><em>typedef int for comp</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions_1">Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-add"><strong>add</strong></a> (int a, int b) <br><em>print the added result</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-print"><strong>print</strong></a> (void) <br><em>print function</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="structures-and-types-documentation_1">Structures and Types Documentation</h2>
+<h3 id="enum-day">enum <code>DAY</code></h3>
+<pre><code class="language-c">enum DAY {
+    MON = 1,
+    TUE,
+    WED,
+    THU,
+    FRI,
+    SAT,
+    SUN
+};
+</code></pre>
+<h3 id="struct-comp2">struct <code>comp2</code></h3>
+<p><em>struct</em> <a href="#struct-comp2"><em><strong>comp2</strong></em></a></p>
+<p>Variables:</p>
+<ul>
+<li>
+<p>int bar  </p>
+</li>
+<li>
+<p>int foo  </p>
+</li>
+</ul>
+<h3 id="typedef-comp2_int">typedef <code>comp2_int</code></h3>
+<p><em>typedef int for comp</em></p>
+<pre><code class="language-c">typedef int comp2_int;
+</code></pre>
+<h2 id="functions-documentation_1">Functions Documentation</h2>
+<h3 id="function-add_1">function <code>add</code></h3>
+<p><em>print the added result</em></p>
+<pre><code class="language-c">void add (
+    int a,
+    int b
+) 
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>a</code> a </li>
+<li><code>b</code> b</li>
+</ul>
+<h3 id="function-print_1">function <code>print</code></h3>
+<p><em>print function</em></p>
+<pre><code class="language-c">void print (
+    void
+) 
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

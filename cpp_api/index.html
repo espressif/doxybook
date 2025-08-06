@@ -1,0 +1,2105 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../c_api/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>API Reference - Test Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Test Project" class="md-header__button md-logo" aria-label="Test Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Test Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Test Project" class="md-nav__button md-logo" aria-label="Test Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Test Project
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#header-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcanimalh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/animal.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-exampleinner_namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example::inner_namespace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-exampleanimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::Animal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-exampleanimal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::Animal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-exampleanimalresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      struct example::Animal::Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-exampleinner_namespacevector" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::inner_namespace::Vector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum Type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-some_global_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      function some_global_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-some_namespace_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      function some_namespace_function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcanimal_interfaceh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/animal_interface.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-exampleanimalinterface" class="md-nav__link">
+    <span class="md-ellipsis">
+      interface example::AnimalInterface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface-exampleanimalinterface_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      interface example::AnimalInterface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcbirdh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/bird.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-examplebird" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::Bird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplebird_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::Bird
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcconfigh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/config.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macros Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-config_hello" class="md-nav__link">
+    <span class="md-ellipsis">
+      define CONFIG_HELLO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-config_world" class="md-nav__link">
+    <span class="md-ellipsis">
+      define CONFIG_WORLD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      define PI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-print_pretty" class="md-nav__link">
+    <span class="md-ellipsis">
+      define PRINT_PRETTY
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcexampleh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/example.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcspecial_birdh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/special_bird.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-examplespecialbird" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::SpecialBird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplespecialbird_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::SpecialBird
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcutilsexceptionh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/utils/exception.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-examplecustomexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::CustomException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplecustomexception_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::CustomException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplenumericexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::NumericException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplenumericexception_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::NumericException
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#header-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcanimalh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/animal.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-exampleinner_namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example::inner_namespace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-exampleanimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::Animal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-exampleanimal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::Animal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-exampleanimalresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      struct example::Animal::Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-exampleinner_namespacevector" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::inner_namespace::Vector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum Type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-some_global_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      function some_global_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-some_namespace_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      function some_namespace_function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcanimal_interfaceh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/animal_interface.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-exampleanimalinterface" class="md-nav__link">
+    <span class="md-ellipsis">
+      interface example::AnimalInterface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface-exampleanimalinterface_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      interface example::AnimalInterface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcbirdh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/bird.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-examplebird" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::Bird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplebird_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::Bird
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcconfigh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/config.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macros Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-config_hello" class="md-nav__link">
+    <span class="md-ellipsis">
+      define CONFIG_HELLO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-config_world" class="md-nav__link">
+    <span class="md-ellipsis">
+      define CONFIG_WORLD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      define PI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-print_pretty" class="md-nav__link">
+    <span class="md-ellipsis">
+      define PRINT_PRETTY
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcexampleh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/example.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcspecial_birdh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/special_bird.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-examplespecialbird" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::SpecialBird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplespecialbird_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::SpecialBird
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-srcutilsexceptionh" class="md-nav__link">
+    <span class="md-ellipsis">
+      File src/utils/exception.h
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces-documentation_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      namespace example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-documentation_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-examplecustomexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::CustomException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplecustomexception_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::CustomException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplenumericexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::NumericException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-examplenumericexception_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      class example::NumericException
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-reference">API Reference</h1>
+<h2 id="header-files">Header files</h2>
+<ul>
+<li><a href="#file-srcanimalh">src/animal.h</a></li>
+<li><a href="#file-srcanimal_interfaceh">src/animal_interface.h</a></li>
+<li><a href="#file-srcbirdh">src/bird.h</a></li>
+<li><a href="#file-srcconfigh">src/config.h</a></li>
+<li><a href="#file-srcexampleh">src/example.h</a></li>
+<li><a href="#file-srcspecial_birdh">src/special_bird.h</a></li>
+<li><a href="#file-srcutilsexceptionh">src/utils/exception.h</a></li>
+</ul>
+<h2 id="file-srcanimalh">File src/animal.h</h2>
+<h2 id="namespaces">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="#namespace-example"><strong>example</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="#namespace-exampleinner_namespace"><strong>inner_namespace</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-exampleanimal"><strong>Animal</strong></a>  <br><em>Base class for all animals from which</em> <a href="#class-examplebird"><em><strong>Bird</strong></em></a><em> derives.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-exampleanimal"><strong>Animal</strong></a>  <br><em>Base class for all animals from which</em> <a href="#class-examplebird"><em><strong>Bird</strong></em></a><em> derives.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="#struct-exampleanimalresult"><strong>Result</strong></a> <br><em>Some random inner class of</em> <a href="#class-exampleanimal"><em><strong>Animal</strong></em></a><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-exampleinner_namespacevector"><strong>Vector</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">enum</td>
+<td style="text-align: left;"><a href="#enum-type"><strong>Type</strong></a>  <br><em>The 6 classes of animal kingdom.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-some_global_function"><strong>some_global_function</strong></a> (<a href="#class-exampleanimal"><strong>example::Animal</strong></a> *animal) <br><em>Some random global function that modifies Animal.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-some_namespace_function"><strong>some_namespace_function</strong></a> (Animal *animal) <br><em>Some random namespace function that modifies</em> <a href="#class-exampleanimal"><em><strong>Animal</strong></em></a><em>.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="namespaces-documentation">Namespaces Documentation</h2>
+<h3 id="namespace-example">namespace <code>example</code></h3>
+<h3 id="namespace-exampleinner_namespace">namespace <code>example::inner_namespace</code></h3>
+<h2 id="classes-documentation">Classes Documentation</h2>
+<h3 id="class-exampleanimal">class <code>example::Animal</code></h3>
+<p><em>Base class for all animals from which</em> <a href="#class-examplebird"><em><strong>Bird</strong></em></a><em> derives.</em></p>
+<p>Lorem Ipsum Donor. Some <a href="http://github.com">Random link with <strong>bold</strong> and_italics_</a> And the following is a<code>typewritter</code> font.</p>
+<p>Example code:</p>
+<pre><code class="language-cpp">Animal animal = Animal(&quot;Hello World&quot;, nullptr, nullptr);
+std::cout &lt;&lt; animal.get_name() &lt;&lt; std::endl;
+</code></pre>
+<p><strong>See also:</strong> <a href="#class-examplebird"><strong>Bird</strong></a></p>
+<p><strong>Bug</strong></p>
+<p>Some random bug </p>
+<p><strong>Note:</strong></p>
+<p>Some random note </p>
+<p><strong>Warning:</strong></p>
+<p>Some random warning </p>
+<p><strong>Test</strong></p>
+<p>Some random test description </p>
+<p><strong>Todo</strong></p>
+<p>Some random todo </p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> Some random template paramater description which actually does not exist in the code! </li>
+</ul>
+<p><strong>Precondition:</strong></p>
+<p>First initialize the system. </p>
+<p><strong>Date:</strong></p>
+<p>2017-2018 </p>
+<p><strong>Author:</strong></p>
+<p>Matus Novak </p>
+<p><strong>Author:</strong></p>
+<p>Hello World</p>
+<p>Variables:</p>
+<ul>
+<li>
+<p><a href="#class-exampleanimal"><strong>Animal</strong></a> * father  <br><em>The pointer to the father.</em><br>Can be null!</p>
+</li>
+<li>
+<p><a href="#class-exampleanimal"><strong>Animal</strong></a> * mother  <br><em>The pointer to the mother.</em><br>Can be null!</p>
+</li>
+<li>
+<p>std::string name  </p>
+</li>
+</ul>
+<h3 id="class-exampleanimal_1">class <code>example::Animal</code></h3>
+<p><em>Base class for all animals from which</em> <a href="#class-examplebird"><em><strong>Bird</strong></em></a><em> derives.</em></p>
+<p>Lorem Ipsum Donor. Some <a href="http://github.com">Random link with <strong>bold</strong> and_italics_</a> And the following is a<code>typewritter</code> font.</p>
+<p>Example code:</p>
+<pre><code class="language-cpp">Animal animal = Animal(&quot;Hello World&quot;, nullptr, nullptr);
+std::cout &lt;&lt; animal.get_name() &lt;&lt; std::endl;
+</code></pre>
+<p><strong>See also:</strong> <a href="#class-examplebird"><strong>Bird</strong></a></p>
+<p><strong>Bug</strong></p>
+<p>Some random bug </p>
+<p><strong>Note:</strong></p>
+<p>Some random note </p>
+<p><strong>Warning:</strong></p>
+<p>Some random warning </p>
+<p><strong>Test</strong></p>
+<p>Some random test description </p>
+<p><strong>Todo</strong></p>
+<p>Some random todo </p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> Some random template paramater description which actually does not exist in the code! </li>
+</ul>
+<p><strong>Precondition:</strong></p>
+<p>First initialize the system. </p>
+<p><strong>Date:</strong></p>
+<p>2017-2018 </p>
+<p><strong>Author:</strong></p>
+<p>Matus Novak </p>
+<p><strong>Author:</strong></p>
+<p>Hello World</p>
+<p>Variables:</p>
+<ul>
+<li>
+<p><a href="#class-exampleanimal"><strong>Animal</strong></a> * father  <br><em>The pointer to the father.</em><br>Can be null!</p>
+</li>
+<li>
+<p><a href="#class-exampleanimal"><strong>Animal</strong></a> * mother  <br><em>The pointer to the mother.</em><br>Can be null!</p>
+</li>
+<li>
+<p>std::string name  </p>
+</li>
+</ul>
+<h3 id="struct-exampleanimalresult">struct <code>example::Animal::Result</code></h3>
+<p><em>Some random inner class of</em> <a href="#class-exampleanimal"><em><strong>Animal</strong></em></a><em>.</em></p>
+<p>Variables:</p>
+<ul>
+<li>
+<p>const <a href="#class-exampleanimal"><strong>Animal</strong></a> * father   = = nullptr</p>
+</li>
+<li>
+<p>const <a href="#class-exampleanimal"><strong>Animal</strong></a> * mother   = = nullptr</p>
+</li>
+<li>
+<p>const std::string name  </p>
+</li>
+<li>
+<p>const <a href="#enum-type"><strong>Type</strong></a> type   = = Type::NONE</p>
+</li>
+</ul>
+<h3 id="class-exampleinner_namespacevector">class <code>example::inner_namespace::Vector</code></h3>
+<p>Variables:</p>
+<ul>
+<li>
+<p>int x  </p>
+</li>
+<li>
+<p>int y  </p>
+</li>
+<li>
+<p>int z  </p>
+</li>
+</ul>
+<h2 id="types-documentation">Types Documentation</h2>
+<h3 id="enum-type">enum <code>Type</code></h3>
+<p><em>The 6 classes of animal kingdom.</em></p>
+<pre><code class="language-c">enum Type {
+    NONE = 0,
+    INSECT = 1,
+    AMPHIBIAN = 2,
+    BIRD = 3,
+    FISH = 4,
+    REPTILE = 5,
+    MAMMAL = 6
+};
+</code></pre>
+<p>Lorem Ipsum Donor.</p>
+<h2 id="functions-documentation">Functions Documentation</h2>
+<h3 id="function-some_global_function">function <code>some_global_function</code></h3>
+<p><em>Some random global function that modifies Animal.</em></p>
+<pre><code class="language-c">void some_global_function (
+    example::Animal *animal
+) 
+</code></pre>
+<p><strong>See also:</strong> Animal </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>animal</code> The pointer to the animal instance</li>
+</ul>
+<h3 id="function-some_namespace_function">function <code>some_namespace_function</code></h3>
+<p><em>Some random namespace function that modifies</em> <a href="#class-exampleanimal"><em><strong>Animal</strong></em></a><em>.</em></p>
+<pre><code class="language-c">void some_namespace_function (
+    Animal *animal
+) 
+</code></pre>
+<p><strong>See also:</strong> <a href="#class-exampleanimal"><strong>Animal</strong></a></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>animal</code> The pointer to the animal instance</li>
+</ul>
+<h2 id="file-srcanimal_interfaceh">File src/animal_interface.h</h2>
+<h2 id="namespaces_1">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="#namespace-example"><strong>example</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes_1">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">interface</td>
+<td style="text-align: left;"><a href="#interface-exampleanimalinterface"><strong>AnimalInterface</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">interface</td>
+<td style="text-align: left;"><a href="#interface-exampleanimalinterface"><strong>AnimalInterface</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="namespaces-documentation_1">Namespaces Documentation</h2>
+<h3 id="namespace-example_1">namespace <code>example</code></h3>
+<h2 id="classes-documentation_1">Classes Documentation</h2>
+<h3 id="interface-exampleanimalinterface">interface <code>example::AnimalInterface</code></h3>
+<h3 id="interface-exampleanimalinterface_1">interface <code>example::AnimalInterface</code></h3>
+<h2 id="file-srcbirdh">File src/bird.h</h2>
+<h2 id="namespaces_2">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="#namespace-example"><strong>example</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes_2">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-examplebird"><strong>Bird</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-examplebird"><strong>Bird</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="namespaces-documentation_2">Namespaces Documentation</h2>
+<h3 id="namespace-example_2">namespace <code>example</code></h3>
+<h2 id="classes-documentation_2">Classes Documentation</h2>
+<h3 id="class-examplebird">class <code>example::Bird</code></h3>
+<h3 id="class-examplebird_1">class <code>example::Bird</code></h3>
+<h2 id="file-srcconfigh">File src/config.h</h2>
+<p><em>This is a config file.</em></p>
+<p>This is a detailed description</p>
+<h2 id="macros">Macros</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="#define-config_hello"><strong>CONFIG_HELLO</strong></a>  (123)<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="#define-config_world"><strong>CONFIG_WORLD</strong></a>  ("abx")<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="#define-pi"><strong>PI</strong></a>  3.14159265358979323846<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="#define-print_pretty"><strong>PRINT_PRETTY</strong></a> (MSG, ...) printf(MSG, __VA_ARGS__)<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="macros-documentation">Macros Documentation</h2>
+<h3 id="define-config_hello">define <code>CONFIG_HELLO</code></h3>
+<pre><code class="language-c">#define CONFIG_HELLO (123)
+</code></pre>
+<h3 id="define-config_world">define <code>CONFIG_WORLD</code></h3>
+<pre><code class="language-c">#define CONFIG_WORLD (&quot;abx&quot;)
+</code></pre>
+<h3 id="define-pi">define <code>PI</code></h3>
+<pre><code class="language-c">#define PI 3.14159265358979323846
+</code></pre>
+<h3 id="define-print_pretty">define <code>PRINT_PRETTY</code></h3>
+<pre><code class="language-c">#define PRINT_PRETTY (
+    MSG,
+    ...
+) printf(MSG, __VA_ARGS__)
+</code></pre>
+<h2 id="file-srcexampleh">File src/example.h</h2>
+<h2 id="file-srcspecial_birdh">File src/special_bird.h</h2>
+<h2 id="namespaces_3">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="#namespace-example"><strong>example</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes_3">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-examplespecialbird"><strong>SpecialBird</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-examplespecialbird"><strong>SpecialBird</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="namespaces-documentation_3">Namespaces Documentation</h2>
+<h3 id="namespace-example_3">namespace <code>example</code></h3>
+<h2 id="classes-documentation_3">Classes Documentation</h2>
+<h3 id="class-examplespecialbird">class <code>example::SpecialBird</code></h3>
+<h3 id="class-examplespecialbird_1">class <code>example::SpecialBird</code></h3>
+<h2 id="file-srcutilsexceptionh">File src/utils/exception.h</h2>
+<h2 id="namespaces_4">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="#namespace-example"><strong>example</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes_4">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-examplecustomexception"><strong>CustomException</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-examplecustomexception"><strong>CustomException</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-examplenumericexception"><strong>NumericException</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="#class-examplenumericexception"><strong>NumericException</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="namespaces-documentation_4">Namespaces Documentation</h2>
+<h3 id="namespace-example_4">namespace <code>example</code></h3>
+<h2 id="classes-documentation_4">Classes Documentation</h2>
+<h3 id="class-examplecustomexception">class <code>example::CustomException</code></h3>
+<p>Variables:</p>
+<ul>
+<li>std::string msg  </li>
+</ul>
+<h3 id="class-examplecustomexception_1">class <code>example::CustomException</code></h3>
+<p>Variables:</p>
+<ul>
+<li>std::string msg  </li>
+</ul>
+<h3 id="class-examplenumericexception">class <code>example::NumericException</code></h3>
+<p>Variables:</p>
+<ul>
+<li>std::string msg  </li>
+</ul>
+<h3 id="class-examplenumericexception_1">class <code>example::NumericException</code></h3>
+<p>Variables:</p>
+<ul>
+<li>std::string msg  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
