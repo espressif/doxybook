@@ -1,0 +1,18 @@
+# API Reference
+
+## Header files
+
+{% for file in files -%}
+- [{{file.location}}]({{file.relative_link}})
+{% endfor %}
+{% for file in files -%}
+{{
+file_template.render(
+    file=file,
+    table_template=table_template,
+    detail_template=detail_template,
+)
+}}
+{% endfor %}
+
+{%- include "footer.jinja" -%}
