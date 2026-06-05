@@ -45,7 +45,7 @@ def parse_options():
     parser.add_argument(
         '--template-dir',
         help='Would use this template dir instead of the default one if set. '
-        'Suggest use "doxygen generate-templates" at first to generate the defaults template dir, '
+        'Suggest use "esp-doxybook generate-templates" at first to generate the default template dir, '
         'and then make your own changes on it.',
     )
     parser.add_argument(

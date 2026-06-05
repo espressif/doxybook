@@ -208,7 +208,9 @@ class XmlParser:
                 refid = item.get('refid')
                 try:
                     ref = self.cache.get(refid)
-                    if italic:
+                    if ref.is_anonymous_synthetic:
+                        ret.append(Text(ref.anonymous_name))
+                    elif italic:
                         if item.text:
                             ret.append(MdLink([MdItalic([MdBold([Text(item.text)])])], ref.relative_link))
                         else:

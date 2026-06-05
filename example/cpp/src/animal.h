@@ -81,6 +81,7 @@ namespace example {
         };
 
         typedef std::pair<Animal*, Animal*> Parents;
+
         /*!
          * @brief Some random inner class of Animal
          */
@@ -216,6 +217,14 @@ namespace example {
         SLEEP,
         ATTACK
     };
+
+    /*!
+     * @brief anonymous struct instance
+     */
+    struct {
+        int wing_span;
+        int beak_length;
+    } anonymous_bird_traits;
 }
 
 /*!
