@@ -1,4 +1,5 @@
 import enum
+import re
 import subprocess
 import sys
 
@@ -60,6 +61,36 @@ def split_safe(s: str, delim: str) -> [str]:
             last = i
         i += 1
     return tokens
+
+
+_ANONYMOUS_SYNTHETIC_TOKEN_RE = re.compile(r'^@\d+$')
+_ANONYMOUS_SYNTHETIC_NAME_RE = re.compile(r'(?<![\w/])(?:[A-Za-z_]\w*::)*@\d+\b')
+
+
+def is_anonymous_synthetic_name(name: str) -> bool:
+    if not name:
+        return False
+    return bool(_ANONYMOUS_SYNTHETIC_TOKEN_RE.match(name.rsplit('::', maxsplit=1)[-1]))
+
+
+def anonymous_compound_label(kind: str) -> str:
+    if kind == 'union':
+        return 'anonymous union'
+    if kind == 'struct':
+        return 'anonymous struct'
+    return 'anonymous type'
+
+
+def sanitize_anonymous_compound_type(type_name: str) -> str:
+    if not type_name:
+        return type_name
+
+    sanitized = _ANONYMOUS_SYNTHETIC_NAME_RE.sub('anonymous', type_name)
+    sanitized = re.sub(r'\bunion\s+anonymous\s+union\b', 'anonymous union', sanitized)
+    sanitized = re.sub(r'\bstruct\s+anonymous\s+struct\b', 'anonymous struct', sanitized)
+    sanitized = re.sub(r'\bunion\s+anonymous\b', 'anonymous union', sanitized)
+    sanitized = re.sub(r'\bstruct\s+anonymous\b', 'anonymous struct', sanitized)
+    return sanitized
 
 
 def get_git_revision_hash() -> str:

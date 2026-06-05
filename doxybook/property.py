@@ -9,6 +9,9 @@ from doxybook.constants import (
 from doxybook.markdown import (
     escape,
 )
+from doxybook.utils import (
+    sanitize_anonymous_compound_type,
+)
 from doxybook.xml_parser import (
     XmlParser,
 )
@@ -102,7 +105,7 @@ class Property:
         def md(self, plain: bool = False) -> str:
             para = self.xml.find('type')
             if para is not None:
-                return self.parser.paras_as_str(para, plain=plain)
+                return sanitize_anonymous_compound_type(self.parser.paras_as_str(para, plain=plain))
             else:
                 return ''
 
