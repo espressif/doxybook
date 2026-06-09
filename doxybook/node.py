@@ -22,6 +22,8 @@ from doxybook.property import (
     Property,
 )
 from doxybook.utils import (
+    anonymous_compound_label,
+    is_anonymous_synthetic_name,
     split_safe,
 )
 from doxybook.xml_parser import (
@@ -422,6 +424,8 @@ class Node:
 
     @property
     def name(self) -> str:
+        if self.is_anonymous_synthetic:
+            return self.anonymous_name
         return self._name
 
     @property
@@ -546,18 +550,31 @@ class Node:
 
     @property
     def name_short(self) -> str:
+        if self.is_anonymous_synthetic:
+            return escape(self.anonymous_name)
         return escape(self.name_tokens[-1])
 
     @property
     def name_long(self) -> str:
         try:
+            token = self.anonymous_name if self.is_anonymous_synthetic else self.name_tokens[-1]
             if self._parent.is_parent:
-                return self._parent.name_long + '::' + escape(self.name_tokens[-1])
+                return self._parent.name_long + '::' + escape(token)
             else:
-                return escape(self._name)
+                return escape(token if self.is_anonymous_synthetic else self._name)
         except Exception as e:
             print(e)
             raise e
+
+    @property
+    def is_anonymous_synthetic(self) -> bool:
+        if not (self.is_struct or self.is_union):
+            return False
+        return is_anonymous_synthetic_name(self._name)
+
+    @property
+    def anonymous_name(self) -> str:
+        return anonymous_compound_label(self.kind.value)
 
     @property
     def name_full_unescaped(self) -> str:
