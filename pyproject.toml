@@ -84,7 +84,7 @@ name = "czespressif"
 annotated_tag = true
 tag_format = "v$version"
 
-version = "0.3.0"
+version = "0.3.1"
 version_files = [
     "doxybook/__init__.py",
     "README.md",

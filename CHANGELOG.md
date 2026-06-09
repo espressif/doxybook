@@ -20,6 +20,13 @@
 </div>
 <hr>
 
+## v0.3.1 (2026-06-09)
+
+### 🐛 Bug Fixes
+
+- support anonymous structs *(Fu Hanxi - 9ea04f5)*
+
+
 ## v0.3.0 (2025-08-06)
 
 ### ✨ New Features
