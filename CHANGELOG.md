@@ -20,6 +20,13 @@
 </div>
 <hr>
 
+## v0.3.2 (2026-07-10)
+
+### 🐛 Bug Fixes
+
+- handle fully anonymous union/struct members without name *(Ondrej Kosta - 067f27a)*
+
+
 ## v0.3.1 (2026-06-09)
 
 ### 🐛 Bug Fixes
