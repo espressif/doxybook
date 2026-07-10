@@ -105,7 +105,8 @@ class Node:
         self._children.append(child)
 
     def sort_children(self):
-        self._children.sort(key=lambda x: x._name, reverse=False)
+        # `_name` should always be a string
+        self._children.sort(key=lambda x: x._name or '', reverse=False)
 
     def _check_for_children(self):
         for innergroup in self._xml.findall('innergroup'):
@@ -265,7 +266,7 @@ class Node:
 
         name = self._xml.find('name')
         if name is not None:
-            self._name = name.text
+            self._name = name.text or ''
         else:
             self._name = ''
 
@@ -285,6 +286,9 @@ class Node:
     ) -> ['Node']:
         ret = []
         for child in self._children:
+            if child.is_anonymous_wrapper_member:
+                continue
+
             bool_stmts = []
             if visibility is not None:
                 visibility = Visibility(visibility)
@@ -301,6 +305,13 @@ class Node:
                 ret.append(child)
 
         return ret
+
+    @property
+    def is_anonymous_wrapper_member(self) -> bool:
+        """Whether this node is Doxygen's synthetic memberdef for a fully
+        anonymous union/struct field (no instance name), whose real members
+        are flattened directly into the parent compound."""
+        return self.is_variable and self._name == ''
 
     @property
     def is_static(self) -> bool:

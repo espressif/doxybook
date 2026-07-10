@@ -75,3 +75,16 @@ union union_comp1
     comp1 a;
     comp1 b;
 };
+
+
+/**
+ * @brief Struct with a fully anonymous union member (no instance name).
+ *
+ */
+typedef struct {
+    int kind;             /*!< discriminator for the union below */
+    union {
+        int int_value;    /*!< value when kind is an integer */
+        float float_value; /*!< value when kind is a float */
+    };
+} anonymous_union_comp1_t;
